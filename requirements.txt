@@ -1,0 +1,4 @@
+# Installs the shared V2/V3 experiment and its verification dependencies.
+# Package ranges are maintained in pyproject.toml; the run manifest records
+# the exact installed versions and model revisions used for each result.
+-e .[experiment,dev]

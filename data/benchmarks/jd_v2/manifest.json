@@ -1,0 +1,200 @@
+{
+  "benchmark_config": {
+    "max_attempts_per_candidate": 3,
+    "max_candidates_per_job": 8,
+    "per_family": 20,
+    "prompt_version": "jd_v2_generation_2",
+    "review_sample_size": 8
+  },
+  "benchmark_counts": {
+    "accepted_pairs": 80,
+    "accepted_pairs_by_family": {
+      "ai_engineering": 20,
+      "data_science_analytics": 20,
+      "product_management": 20,
+      "software_engineering": 20
+    },
+    "attempted_candidates": 184,
+    "attempted_generations": 415,
+    "candidate_count": 5109,
+    "rejection_reasons": {
+      "anchor_absent_or_invalid": 97,
+      "high_copies_whole_evidence": 40,
+      "high_drops_numeric_constraint:1": 2,
+      "high_drops_numeric_constraint:1,700": 1,
+      "high_drops_numeric_constraint:12,6": 1,
+      "high_drops_numeric_constraint:30": 1,
+      "high_leaks_company": 8,
+      "high_missing_anchor": 32,
+      "high_not_question": 5,
+      "low_drops_numeric_constraint:0,1": 2,
+      "low_drops_numeric_constraint:1": 5,
+      "low_drops_numeric_constraint:1,700": 1,
+      "low_drops_numeric_constraint:10": 3,
+      "low_drops_numeric_constraint:10,48": 1,
+      "low_drops_numeric_constraint:100": 4,
+      "low_drops_numeric_constraint:12": 1,
+      "low_drops_numeric_constraint:12,6": 1,
+      "low_drops_numeric_constraint:2,27001,27018": 2,
+      "low_drops_numeric_constraint:27001": 3,
+      "low_drops_numeric_constraint:3": 1,
+      "low_drops_numeric_constraint:30": 1,
+      "low_drops_numeric_constraint:360": 3,
+      "low_drops_numeric_constraint:5": 2,
+      "low_drops_numeric_constraint:606": 3,
+      "low_leaks_company": 8,
+      "low_not_lower_lexical_overlap": 34,
+      "low_not_question": 5,
+      "low_repeats_anchor": 79,
+      "missing_or_non_string_query_or_anchor": 92,
+      "query_length": 2,
+      "semantic_low_is_conceptual_paraphrase": 3
+    },
+    "target_pairs": 80
+  },
+  "benchmark_version": "jd_v2",
+  "chunk": {
+    "chunk_overlap": 100,
+    "chunk_size": 1000,
+    "heading_config": "config/section_headings.yaml",
+    "include_heading_in_retrieval": true
+  },
+  "dataset_sha256": "d017db4cf6ed131be69e9a499f03c226598703db7ca859982d95a8eb0d66650f",
+  "dense_model": {
+    "batch_size": 16,
+    "device": "cuda:0",
+    "max_length": 1024,
+    "model_id": "BAAI/bge-m3",
+    "normalize": true,
+    "pooling_method": "cls",
+    "query_max_length": 128,
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "similarity": "cosine",
+    "use_fp16": true
+  },
+  "dependencies": {
+    "FlagEmbedding": "1.4.2",
+    "PyYAML": "6.0.3",
+    "accelerate": "1.15.0",
+    "huggingface-hub": "0.36.2",
+    "job-search-rag": "0.1.0",
+    "numpy": "2.4.6",
+    "pydantic": "2.13.5",
+    "pytest": "9.1.1",
+    "torch": "2.14.0",
+    "transformers": "4.57.6"
+  },
+  "evaluation": {
+    "bootstrap_confidence": 0.95,
+    "bootstrap_samples": 5000,
+    "failure_case_limit": 12,
+    "top_k": 5
+  },
+  "evidence_candidates_sha256": "3ce1dc551f5da397c376872a55a7f4ed89409008502ee710abbc5c61cae27225",
+  "evidence_config": {
+    "max_chars": 420,
+    "max_document_frequency": 0.35,
+    "max_words": 70,
+    "min_chars": 40,
+    "min_words": 8
+  },
+  "evidence_counts": {
+    "accepted_candidates": 5109,
+    "candidate_spans": 11315,
+    "rejected_ambiguous_or_duplicate_source_text": 52,
+    "rejected_generic_corpus_vocabulary": 4,
+    "rejected_length_chars": 1988,
+    "rejected_length_words": 693,
+    "rejected_mentions_source_company": 1376,
+    "rejected_no_complete_node": 10,
+    "rejected_non_role_section": 1349,
+    "rejected_repeated_across_jobs": 472,
+    "rejected_template_or_non_role_fact": 262
+  },
+  "frozen": true,
+  "frozen_at_utc": "2026-09-27T18:00:13.027933+00:00",
+  "generator_model": {
+    "device_map": "auto",
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "enable_thinking": false,
+    "local_files_only": true,
+    "max_new_tokens": 512,
+    "model_id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "generator_snapshot": {
+    "combined_sha256": "189bedc76f575380ec5c48a30a6981b89853bdfdb711305aed11026e83f3da15",
+    "configured_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "files": {
+      "config.json": {
+        "bytes": 728,
+        "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+      },
+      "generation_config.json": {
+        "bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      "merges.txt": {
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      "model-00001-of-00005.safetensors": {
+        "bytes": 3996250744,
+        "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+      },
+      "model-00002-of-00005.safetensors": {
+        "bytes": 3993160032,
+        "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+      },
+      "model-00003-of-00005.safetensors": {
+        "bytes": 3959604768,
+        "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+      },
+      "model-00004-of-00005.safetensors": {
+        "bytes": 3187841392,
+        "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+      },
+      "model-00005-of-00005.safetensors": {
+        "bytes": 1244659840,
+        "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 32878,
+        "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+      },
+      "tokenizer.json": {
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      "tokenizer_config.json": {
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "hub_snapshot_path_matches_revision": true
+  },
+  "gold_scope": "Only nodes containing the generated query's originating evidence span are labeled relevant.",
+  "heading_rules_sha256": "e3f62653ed62520ec22a36e1a4e468c4aca00a132d279715333780c28c7d4b20",
+  "node_count": 2355,
+  "nodes_sha256": "4ba8d5c1d42737f0bd02865ab8f710a8644c73ceecf67537c89b2e359179bd60",
+  "pair_count": 80,
+  "qrels_sha256": "51523dd4601294989c252c3a3725d674b32c7f3a24bb053d3448df46bff978a3",
+  "queries_sha256": "0ed2f4f37b314574ca798f14d2e0bd205487f1b8388ab95256fc1304961ba415",
+  "query_count": 160,
+  "retrieval": {
+    "bm25_b": 0.75,
+    "bm25_k1": 1.5,
+    "lowercase": true,
+    "rrf_k": 60,
+    "stemming": false,
+    "stopwords": "none",
+    "tokenizer": "technical_terms_v1",
+    "top_k": 20
+  },
+  "seed": 20260927
+}

@@ -1,0 +1,70 @@
+experiment_version: jd_v2
+dataset_sha256: d017db4cf6ed131be69e9a499f03c226598703db7ca859982d95a8eb0d66650f
+seed: 20260927
+
+paths:
+  corpus: data/canonical/jobs.jsonl
+  dataset_summary: reports/dataset_analysis/summary.json
+  benchmark_dir: data/benchmarks/jd_v2
+  runs_dir: runs
+  report_dir: reports/experiment/jd_v2
+
+chunk:
+  chunk_size: 1000
+  chunk_overlap: 100
+  heading_config: config/section_headings.yaml
+  include_heading_in_retrieval: true
+
+evidence:
+  min_chars: 40
+  max_chars: 420
+  min_words: 8
+  max_words: 70
+  max_document_frequency: 0.35
+
+benchmark:
+  per_family: 20
+  max_attempts_per_candidate: 3
+  max_candidates_per_job: 8
+  review_sample_size: 8
+  prompt_version: jd_v2_generation_2
+
+models:
+  generator:
+    model_id: Qwen/Qwen3-8B
+    revision: b968826d9c46dd6066d109eabc6255188de91218
+    local_path: null
+    dtype: bfloat16
+    max_new_tokens: 512
+    local_files_only: true
+    do_sample: false
+    enable_thinking: false
+    device_map: auto
+  dense:
+    model_id: BAAI/bge-m3
+    revision: 5617a9f61b028005a4858fdac845db406aefb181
+    local_path: null
+    device: cuda:0
+    use_fp16: true
+    batch_size: 16
+    query_max_length: 128
+    max_length: 1024
+    normalize: true
+    pooling_method: cls
+    similarity: cosine
+
+retrieval:
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  tokenizer: technical_terms_v1
+  lowercase: true
+  stemming: false
+  stopwords: none
+  top_k: 20
+  rrf_k: 60
+
+evaluation:
+  top_k: 5
+  bootstrap_samples: 5000
+  bootstrap_confidence: 0.95
+  failure_case_limit: 12

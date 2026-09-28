@@ -1,0 +1,103 @@
+# Ordered, conservative heading aliases for descriptive corpus analysis.
+# Match against whitespace-normalized heading text, without its trailing colon.
+sections:
+  preferred_qualifications:
+    label: Preferred Qualifications
+    patterns:
+      - '^(?:preferred|desired) (?:qualifications|skills|experience)$'
+      - '^nice to have(?:s)?$'
+      - '^bonus points(?: if)?$'
+      - '^additional skills (?:that )?we value$'
+      - '^an ideal candidate also has$'
+      - '^preferred qualifications? and special requirements$'
+      - '^preferred qualifications? & special requirements$'
+  responsibilities:
+    label: Responsibilities
+    patterns:
+      - '^(?:key |main |your )?responsibilities$'
+      - '^what you(?: will|[\x27’]ll) (?:do|be doing|achieve)$'
+      - '^what you[\x27’]d be doing in this role$'
+      - '^the work you(?: will|[\x27’]ll) do$'
+      - '^you will(?: be responsible for)?$'
+      - '^the impact you will have$'
+      - '^a typical day$'
+      - '^what you(?: will|[\x27’]ll) do (?:here|at .+)$'
+      - '^your (?:impact|mission|accountabilities)$'
+      - '^key accountabilities$'
+      - '^principal accountabilities$'
+      - '^in this role,? you (?:will|can expect to)$'
+      - '^the role entails$'
+      - '^what you(?: will|[\x27’]ll) be responsible for$'
+  qualifications:
+    label: Qualifications
+    patterns:
+      - '^(?:minimum |basic |required |key )?qualifications(?: and experience)?$'
+      - '^qualifications & experience$'
+      - '^the qualifications you need$'
+      - '^required$'
+      - '^skills$'
+      - '^your expertise$'
+      - '^(?:minimum |basic |required )?requirements(?: for the role)?$'
+      - '^required skills and experience$'
+      - '^skills (?:and|&) experience$'
+      - '^knowledge,? experience and skills$'
+      - '^what you(?: will|[\x27’]ll) bring$'
+      - '^what you bring$'
+      - '^what you (?:should|need to) have$'
+      - '^what we(?: are|[\x27’]re) looking for(?: in you)?$'
+      - '^what we look for$'
+      - '^who you are$'
+      - '^about you$'
+      - '^your profile$'
+      - '^your toolkit$'
+      - '^we[\x27’]d love to hear from you if you have$'
+      - '^you should apply if$'
+      - '^to thrive in this role,? you have$'
+      - '^experience$'
+      - '^personal attributes$'
+      - '^key experience ?/ ?qualifications$'
+  about_role:
+    label: About the Role
+    patterns:
+      - '^about (?:the|this) (?:role|job|position)$'
+      - '^(?:the|your) role$'
+      - '^role (?:overview|description)$'
+      - '^the opportunity$'
+      - '^position overview$'
+      - '^an overview of this role$'
+  role_description:
+    label: Role Description (Broad)
+    patterns:
+      - '^job description$'
+      - '^description du poste$'
+      - '^jobbeskrivning$'
+  about_company:
+    label: About the Company
+    patterns:
+      - '^company description$'
+      - '^description de l[\x27’]entreprise$'
+      - '^about us$'
+      - '^who we are$'
+      - '^our company$'
+      - '^a little about us$'
+      - '^(?:more )?about (?!the (?:role|team|job|position|opportunity|department)\b|trust\b)[\w .&+\x27-]+$'
+  benefits:
+    label: Benefits
+    patterns:
+      - '^(?:our )?benefits$'
+      - '^perks(?: and benefits)?$'
+      - '^what we (?:can )?offer(?: you)?$'
+      - '^what we offer for our full-time,? regular employees$'
+      - '^how we(?: will|[\x27’]ll) take care of you$'
+      - '^what[\x27’]s in it for you$'
+      - '^what .+ can offer you$'
+      - '^what we(?: will|[\x27’]ll) offer$'
+      - '^total rewards$'
+      - '^rewards? and benefits(?: at .+)?$'
+      - '^why join us$'
+  additional_information:
+    label: Additional Information (Broad)
+    patterns:
+      - '^additional information$'
+      - '^further information$'
+      - '^informations supplémentaires$'

@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+
+# Local source data and generated analysis outputs
+/data/raw/
+# Keep only the frozen V2 queries, qrels, and manifest in the repository.
+/data/benchmarks/*
+!/data/benchmarks/jd_v2/
+/data/benchmarks/jd_v2/*
+!/data/benchmarks/jd_v2/queries.jsonl
+!/data/benchmarks/jd_v2/qrels.jsonl
+!/data/benchmarks/jd_v2/manifest.json
+/reports/
+/history.md
+/runs/
+/logs/
+/models/
+/hf_cache/
+
+# Keep live ATS collection and raw-to-canonical preparation code local.
+/src/collection/
+/src/preprocessing/dataset.py
+/config/dataset.yaml
+/config/sources.yaml
+/config/sources_discovery.yaml
+/tests/
+
+# Keep only the repository's main documentation file in Git.
+**/*.md
+!/README.md
+
+# Linux shell scripts for local experiments
+*.sh

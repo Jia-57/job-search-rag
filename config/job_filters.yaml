@@ -1,0 +1,53 @@
+# Case-insensitive regex patterns are interpreted by the Phase 1 title filter.
+internship_title_patterns:
+  - '\bintern(ship)?\b'
+  - '\bworking[\s-]+student\b'
+  - '\bwerkstudent(in)?\b'
+  - '\bco[\s-]?op\b'
+  - '\bstudent[\s-]+assistant\b'
+  - '\bsummer[\s-]+intern\b'
+
+ambiguous_title_patterns: []
+
+# SmartRecruiters supports server-side q search; local title rules still decide eligibility.
+api_query_terms:
+  - AI engineer
+  - AI architect
+  - AI automation
+  - data scientist
+  - data analyst
+  - product manager
+  - product owner
+  - software engineer
+  - backend engineer
+  - frontend engineer
+  - full stack engineer
+  - platform engineer
+  - infrastructure engineer
+
+families:
+  software_engineering:
+    positive_title_patterns:
+      - '\bsoftware(?:\s+development)?\s+engineer\b'
+      - '\b(?:backend|back[\s-]?end|frontend|front[\s-]?end|full[\s-]?stack|mobile|platform|infrastructure|devops|embedded(?:\s+software)?)\s+engineer\b'
+      - '\bsite[\s-]+reliability[\s-]+engineer\b'
+    negative_title_patterns:
+      - '\bdata[\s-]+(?:platform|infrastructure)[\s-]+engineer\b'
+      - '\b(?:AI|ML|machine[\s-]+learning)[\s-]+(?:platform|infrastructure)[\s-]+engineer\b'
+      - '\b(?:QA|quality[\s-]+assurance|test)[\s-]+engineer\b'
+  data_science_analytics:
+    positive_title_patterns:
+      - '\bdata[\s-]+scientist\b'
+      - '\bdata[\s-]+analyst\b'
+    negative_title_patterns: []
+  ai_engineering:
+    positive_title_patterns:
+      - '\bAI[\s-]+architect\b'
+      - '\bAI[\s-]+engineer\b'
+      - '\bAI[\s-]+automation\b'
+    negative_title_patterns: []
+  product_management:
+    positive_title_patterns:
+      - '\bproduct[\s-]+manager\b'
+      - '\bproduct[\s-]+owner\b'
+    negative_title_patterns: []

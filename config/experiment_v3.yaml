@@ -1,0 +1,30 @@
+experiment_version: jd_v3_rerank_1
+source:
+  benchmark_dir: data/benchmarks/jd_v2
+  run_dir: runs/jd_v2_run_01
+paths:
+  benchmark_snapshot_dir: data/benchmarks/jd_v3
+  runs_dir: runs/jd_v3
+  reports_dir: reports/experiment/jd_v3
+run_id: jd_v3_rerank_01
+
+candidate:
+  methods: [bm25, dense]
+  top_k_per_method: 20
+  deduplicate_by: node_id
+
+reranker:
+  model_id: BAAI/bge-reranker-v2-m3
+  revision: 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e
+  local_path: null
+  device: cuda:0
+  use_fp16: true
+  batch_size: 16
+  max_length: 1024
+  normalize: false
+
+evaluation:
+  top_k: 5
+  bootstrap_samples: 5000
+  bootstrap_confidence: 0.95
+  seed: 20260927
