@@ -19,6 +19,7 @@ __pycache__/
 /logs/
 /models/
 /hf_cache/
+/Retrieval_Robustness_for_RAG.pdf
 
 # Keep live ATS collection and raw-to-canonical preparation code local.
 /src/collection/
